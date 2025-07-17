@@ -27,18 +27,19 @@ const { height } = Dimensions.get("window");
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    justifyContent: "space-around",
   },
   backgroundImageContainer: {
     flex: 1,
     height: height,
   },
   logoContainer: {
-    padding: SPACING.large,
+    padding: SPACING.medium,
     alignItems: "center",
     marginTop: 74,
   },
   titleContainer: {
-    marginTop: SPACING.large,
+    marginTop: SPACING.medium,
   },
   titleText: {
     fontSize: FONT_SIZE.large,
