@@ -85,6 +85,8 @@ const styles = StyleSheet.create({
   signUpGroup: {
     flexDirection: "row",
     justifyContent: "center",
+    alignItems: "center",
+    gap: 4,
     position: "absolute",
     left: 77,
     right: 76,

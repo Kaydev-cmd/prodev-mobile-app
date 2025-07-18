@@ -3,8 +3,11 @@ import { View, Text, Image, TextInput, TouchableOpacity } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "@/styles/_joinstyle";
 import { FontAwesome, Ionicons } from "@expo/vector-icons";
+import { useRouter } from "expo-router";
 
 const Sign = () => {
+  const router = useRouter();
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
@@ -49,6 +52,49 @@ const Sign = () => {
                 />
               </View>
             </View>
+            <Text style={styles.forgotPasswordText}>Forgot Password?</Text>
+          </View>
+
+          <TouchableOpacity style={styles.primaryButton}>
+            <Text style={styles.buttonText}>Sign In</Text>
+          </TouchableOpacity>
+
+          {/* Divider Group */}
+          <View style={styles.dividerGroup}>
+            <View style={styles.divider}></View>
+            <Text style={styles.dividerText}>OR</Text>
+            <View style={styles.divider}></View>
+          </View>
+
+          {/* Sign Up Group */}
+          <View style={styles.secondaryButtonGroup}>
+            <TouchableOpacity>
+              <View style={styles.secondaryButton}>
+                <Image source={require("@/assets/images/google.png")} />
+                <Text style={styles.secondaryButtonText}>
+                  Continue with Google
+                </Text>
+              </View>
+            </TouchableOpacity>
+
+            <TouchableOpacity>
+              <View style={styles.secondaryButton}>
+                <Image source={require("@/assets/images/facebook.png")} />
+                <Text style={styles.secondaryButtonText}>
+                  Continue with Facebook
+                </Text>
+              </View>
+            </TouchableOpacity>
+          </View>
+
+          <View style={styles.signUpGroup}>
+            <Text>Don't have an account?</Text>
+            <Text
+              style={styles.signUpTitleText}
+              onPress={() => router.push("/join")}
+            >
+              Join now
+            </Text>
           </View>
         </View>
       </SafeAreaView>
