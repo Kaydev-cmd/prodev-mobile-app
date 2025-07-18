@@ -5,7 +5,7 @@ import {
   FontAwesome,
   Ionicons,
 } from "@expo/vector-icons";
-import { Tabs } from "expo-router"; 
+import { Tabs } from "expo-router";
 
 const HomeRootLayout = () => {
   return (
@@ -42,16 +42,6 @@ const HomeRootLayout = () => {
         }}
       />
       <Tabs.Screen
-        name="saved"
-        options={{
-          title: "Saved",
-          headerShown: true,
-          tabBarIcon: ({ color }) => (
-            <EvilIcons name="heart" size={27} color={color} />
-          ),
-        }}
-      />
-      <Tabs.Screen
         name="inbox"
         options={{
           title: "Inbox",
@@ -67,7 +57,7 @@ const HomeRootLayout = () => {
           title: "Profile",
           headerShown: true,
           tabBarIcon: ({ color }) => (
-            <FontAwesome name="user-o" size={24} color="black" />
+            <FontAwesome name="user-o" size={24} color={color} />
           ),
         }}
       />
