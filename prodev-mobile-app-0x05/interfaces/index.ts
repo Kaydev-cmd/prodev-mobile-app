@@ -9,7 +9,7 @@ export interface PropertyListingProps {
 }
 
 export interface PropertyLocationProps {
-  stret: string;
+  street: string;
   city: string;
   country: string;
 }
