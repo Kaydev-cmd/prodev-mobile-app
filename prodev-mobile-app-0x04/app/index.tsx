@@ -7,8 +7,11 @@ import {
 } from "react-native";
 import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "@/styles/_mainstyle";
+import { useRouter } from "expo-router";
 
 export default function Index() {
+  const router = useRouter();
+
   return (
     <SafeAreaProvider>
       <SafeAreaView style={{ flex: 1 }}>
@@ -39,11 +42,17 @@ export default function Index() {
 
             {/* Button Group */}
             <View style={styles.buttonGroup}>
-              <TouchableOpacity style={styles.buttonPrimary}>
+              <TouchableOpacity
+                style={styles.buttonPrimary}
+                onPress={() => router.push("/join")}
+              >
                 <Text style={styles.buttonPrimaryText}>Join Here</Text>
               </TouchableOpacity>
 
-              <TouchableOpacity style={styles.buttonSecondary}>
+              <TouchableOpacity
+                style={styles.buttonSecondary}
+                onPress={() => router.push("/Sign")}
+              >
                 <Text style={styles.buttonSecondaryText}>Sign In</Text>
               </TouchableOpacity>
             </View>
