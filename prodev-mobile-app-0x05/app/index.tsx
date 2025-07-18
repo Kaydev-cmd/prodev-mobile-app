@@ -1,13 +1,13 @@
-import {
-  Text,
-  View,
-  Image,
-  ImageBackground,
-  TouchableOpacity,
-} from "react-native";
-import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 import { styles } from "@/styles/_mainstyle";
 import { useRouter } from "expo-router";
+import {
+  Image,
+  ImageBackground,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
+import { SafeAreaProvider, SafeAreaView } from "react-native-safe-area-context";
 
 export default function Index() {
   const router = useRouter();
@@ -44,7 +44,7 @@ export default function Index() {
             <View style={styles.buttonGroup}>
               <TouchableOpacity
                 style={styles.buttonPrimary}
-                onPress={() => router.push("/join")}
+                onPress={() => router.push("/Join")}
               >
                 <Text style={styles.buttonPrimaryText}>Join Here</Text>
               </TouchableOpacity>
@@ -57,10 +57,16 @@ export default function Index() {
               </TouchableOpacity>
             </View>
             <View style={styles.buttonGroupSubText}>
-              <Text style={styles.buttonSecondaryText}>Continue to Home</Text>
+              <Text
+                style={styles.buttonSecondaryText}
+                onPress={() => router.push("/")}
+              >
+                Continue to Home
+              </Text>
             </View>
           </View>
         </ImageBackground>
+        {/* <HomeRootLayout /> */}
       </SafeAreaView>
     </SafeAreaProvider>
   );
