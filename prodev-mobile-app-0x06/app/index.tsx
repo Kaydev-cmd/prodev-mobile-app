@@ -1,4 +1,5 @@
 import { Redirect, useRouter } from "expo-router";
+import "../styles/global.css";
 
 export default function Index() {
   const router = useRouter();
