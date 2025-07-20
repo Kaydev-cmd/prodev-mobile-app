@@ -1,4 +1,5 @@
-import { FILTERS } from "@/constants";
+import PropertyListing from "@/components/PropertyListing";
+import { FILTERS, SAMPLE_DATA } from "@/constants";
 import { styles } from "@/styles/_homestyle";
 import { Feather } from "@expo/vector-icons";
 import React from "react";
@@ -49,6 +50,7 @@ const Home = () => {
       </View>
 
       <ScrollView style={styles.listingContainer}>
+        <PropertyListing listings={SAMPLE_DATA} />
         <View style={styles.paginationContainer}>
           <TouchableHighlight style={styles.showMoreButton}>
             <Text style={styles.showMoreButtonText}>Show More</Text>
