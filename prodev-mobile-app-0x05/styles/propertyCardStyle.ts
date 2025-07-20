@@ -21,6 +21,14 @@ const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent: "center",
   },
+  favoriteOverlay: {
+    backgroundColor: "rgba(0,0,0,0.4)",
+    width: 48,
+    height: 48,
+    borderRadius: 24,
+    alignItems: "center",
+    justifyContent: "center",
+  },
   rateGroup: {
     flexDirection: "row",
     alignItems: "center",
